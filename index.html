@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Інтернет-магазин ZaKul - стильний одяг та аксесуари">
+    <title>ZaKul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <!-- Логотип ZaKul -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="60">
+                    <text x="10" y="45" font-family="Poppins, sans-serif" font-size="36" fill="#f9a825" font-weight="bold">Za</text>
+                    <text x="60" y="45" font-family="Poppins, sans-serif" font-size="36" fill="#333" font-weight="bold">Kul</text>
+                </svg>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#categories">Категорії</a></li>
+                    <li><a href="#products">Товари</a></li>
+                    <li><a href="#cart">Кошик</a></li>
+                    <li><a href="#auth">Вхід</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle">Темна тема</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Головний банер -->
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Ласкаво просимо до ZaKul</h2>
+                <p>Продавайте найкращий одяг для будь-якого випадку</p>
+                <button class="primary-btn" onclick="showCategories()">Дізнатися більше</button>
+            </div>
+        </section>
+
+        <!-- Категорії -->
+        <section id="categories" class="content-section">
+            <h2>Категорії</h2>
+            <div class="content-grid">
+                <div>
+                    <h3 class="category-toggle">Чоловічий одяг</h3>
+                    <ul class="subcategory-list">
+                        <li>Чоловічі шорти</li>
+                        <li>Чоловічі штани</li>
+                        <li>Чоловічі футболки</li>
+                        <li>Чоловічі піджаки</li>
+                        <li>Чоловіче взуття</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="category-toggle">Жіночий одяг</h3>
+                    <ul class="subcategory-list">
+                        <li>Жіночі сукні</li>
+                        <li>Жіночі блузи</li>
+                        <li>Жіночі штани</li>
+                        <li>Жіноче взуття</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="category-toggle">Аксесуари</h3>
+                    <ul class="subcategory-list">
+                        <li>Сумки</li>
+                        <li>Годинники</li>
+                        <li>Шарфи</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Товари -->
+        <section id="products" class="content-section">
+            <h2>Товари</h2>
+            <div id="product-list" class="content-grid">
+                <!-- Товари будуть додаватись динамічно через JS -->
+            </div>
+        </section>
+
+        <!-- Кошик -->
+        <section id="cart" class="content-section">
+            <h2>Кошик</h2>
+            <div id="cart-content">
+                <p>Ваш кошик порожній. Додайте товари для оформлення замовлення.</p>
+            </div>
+        </section>
+
+        <!-- Авторизація -->
+        <section id="auth" class="content-section">
+            <h2>Вхід та реєстрація</h2>
+            <div class="auth-container">
+                <div id="login-form">
+                    <h3>Вхід</h3>
+                    <form>
+                        <label for="email">Електронна пошта</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <button type="submit">Увійти</button>
+                    </form>
+                </div>
+
+                <div id="register-form">
+                    <h3>Реєстрація</h3>
+                    <form>
+                        <label for="register-email">Електронна пошта</label>
+                        <input type="email" id="register-email" name="email" required>
+
+                        <label for="register-password">Пароль</label>
+                        <input type="password" id="register-password" name="password" required>
+
+                        <label for="confirm-password">Підтвердження пароля</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+
+                        <button type="submit">Зареєструватися</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ZaKul. Всі права захищено.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+

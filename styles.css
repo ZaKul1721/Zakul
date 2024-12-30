@@ -1,0 +1,188 @@
+/* Загальні стилі */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Логотип */
+header .logo svg {
+    width: 200px;
+    height: 60px;
+}
+
+/* Заголовок */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5rem 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Меню навігації */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f9a825;
+}
+
+/* Кнопка переключення теми */
+#theme-toggle {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #f9a825;
+}
+
+/* Банер */
+#hero {
+    background-color: #f9a825;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.primary-btn {
+    background-color: #fff;
+    color: #f9a825;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #c77800;
+}
+
+/* Категорії */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+/* Підкатегорії */
+.subcategory-list {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.category-toggle:after {
+    content: " ▼";
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.category-toggle.open:after {
+    content: " ▲";
+}
+
+.category-toggle.open + .subcategory-list {
+    display: block;
+}
+
+/* Форма реєстрації та авторизації */
+.auth-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.auth-container form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.auth-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #f9a825;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.auth-container button:hover {
+    background-color: #c77800;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-container {
+        flex-direction: column;
+    }
+}
+
